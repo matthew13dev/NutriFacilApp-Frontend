@@ -7,9 +7,121 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
 
+
+    <!-- Menu para websites -->
+    <header class="">
+        <div class="container">
+            <h1 class="azulPrincipal">NutriFacílApp</h1> 
+        <menu><ul>
+            <li>Taxa Metabólica Basal</li>
+            <li>Tabela Nutricional</li></ul>
+        </menu>
+        </div>
+    </header>
+
+
+
+    <!-- Menu lateral para dispositivos móveis -->
+    <aside id="sidebar">
+        <div class="aside-header">
+            <h1 class="azulPrincipal">NutriFacílApp</h1>
+        </div>
+        <ul>
+            <li><a href="Taxa Metabólica Basal">Taxa Metabólica Basal</a></li>
+            <li><a href="tabelaNutricional">Tabela Nutricional</a></li>
+        </ul>
+    </aside>
+
+
+
+    <!-- Conteúdo principal da página -->
+    <main>
+
+      
+        <!-- Section do formulario -->
+      <section class="container" id="taxaMetabolicaBasal">
+        <div class="section-title">IMC & Taxa Metabolica Basal</div>
+
+        <div class="section-content">
+            <form action="" id="form-nutricional" class="form-nutricional">
+                    <h1>Calcular IMC</h1>
+                    <label for="peso">Peso: (Kg)</label>
+                    <input type="number" step="0.1" name="peso" id="peso" placeholder="Ex: 67">
+
+                    <label for="altura">Altura: (cm)</label>
+                    <input type="number" name="altura" id="altura" placeholder="Ex: 184">        
+
+                    <label for="idade">Idade: </label>
+                    <input type="number" name="idade" id="idade" placeholder="Ex: 23">
+
+
+
+                    <div class="campo-genero">
+                        <p>genero:</p>
+                        <div class="radio-group">
+                            <label for="homem">
+                                <input type="radio" name="genero" value="Homem" id="homem" checked>
+                                <span class="icone">♂</span> Homem
+                            </label>
+                        
+                            
+
+                            <label for="mulher">
+                                <input type="radio" name="genero" value="Mulher"  id="mulher">
+                                <span class="icone">♀</span> Mulher
+                            </label>
+                        </div>
+                    </div>
+
+                    <select name="fatorAtividade" id="fatorAtividade">
+                        <option value="" disabled selected>fator Atividade</option>
+                        <option value="sedentario">Sedentário </option>
+                        <option value="poucoAtivo">Pouco ativo</option>
+                        <option value="moderadamenteAtivo">Moderadamente ativo</option>
+                        <option value="muitoAtivo">Muito ativo</option>
+                        <option value="extremamenteAtivo">Extremamente Ativo</option>
+                    </select>
+
+                <button type="submit">- calcular -</button>
+            
+            </form>
+
+        <div id="resultadoTMB" class="resultado">
+
+            <h1>Resultados</h1>
+            <ul id="resultadoTMBLista">
+                <!-- os resultados serao renderizados via javascript -->
+            </ul>
+
+        </div>
+        </div>
+      </section>
+
+      
+
+
+
+
+      <!-- Section tabela nutricional -->
+      <section id="tabelaNutricional" class="container tabelaNutricional">
+        <h1>Tabela Nutricional </h1>
+      </section>
+
+         
+    </main>
+
+
+    <footer>
+    <p>© 2024 NutriFacílApp - Todos os direitos reservados</p>
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a>
+      <a href="#">Política de Privacidade</a>
+    </div>
+  </footer>
 
     <script src="script.js"></script>
+
+   
 </body>
 </html>

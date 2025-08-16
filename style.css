@@ -14,6 +14,7 @@
     box-sizing: border-box;
     font-family: Inter, Arial, Helvetica, sans-serif ;
     list-style: none;
+    
 }
 
 body{
@@ -94,7 +95,9 @@ header ul li:hover{
 #taxaMetabolicaBasal .section-content{
     display: flex;
     justify-content: space-between;
+    align-items: start;
     gap: 50px;
+    height: 45vh;
 }
 
 .section-title{
@@ -104,6 +107,7 @@ header ul li:hover{
 
 .section-content{
     margin-top: 80px;
+    min-height: 40vh;
 }
 
 
@@ -113,10 +117,12 @@ header ul li:hover{
     opacity: 0;
     transition: all 0.5s ease;
 
-     border: 1px solid var(--cinzaTextoSecundario);
+    border: 1px solid var(--cinzaTextoSecundario);
     border-radius: 15px;
 
     padding: 50px 30px;
+
+    height: 100%
 }
 
 .resultado ul{
@@ -134,7 +140,6 @@ header ul li:hover{
 }
 
 form{
-    margin: 30px 0px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -144,6 +149,8 @@ form{
     border-radius: 15px;
 
     padding: 50px 30px;
+
+    height: 100%;
 }
 
 form label{
@@ -171,7 +178,7 @@ form input[type=number]{
 
 button{
     width: 300px;
-    padding: 10px;
+    padding: 30px;
     background-color: #4DB6E2;
     color: var(--fundoPrincipal);
     border: none;

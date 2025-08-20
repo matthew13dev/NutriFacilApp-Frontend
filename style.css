@@ -19,31 +19,21 @@
 
 body{
     width: 100%;
-    min-height: 100vh;
     
     margin-top: 100px;
 
     font-size: 1.1rem;
+
+    background: linear-gradient(135deg, white 0%, #f1f1f1 50%);
     
 }
 
-main{
-    min-height: 100vh;
-}
-.container{
-    width: 1200px;
-    margin: auto;
-}
-
-section{
-    padding: 100px 0px;
-}
 
 
 /* Header */
 
 header{
-    background-color: var(--azulClaroPrincipal);
+    background: linear-gradient(135deg, var(--azulClaroPrincipal),var(--azulEscuroDestaque));
     color: var(--fundoPrincipal);
     height: 100px;
     width: 100%;
@@ -52,12 +42,20 @@ header{
     position: fixed;
     top: 0;
     z-index: 9999;
+
+    
+}
+
+header .section-title{
+    color: #fff;
 }
 
 header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    
 }
 
 header ul{
@@ -89,6 +87,47 @@ header ul li:hover{
 
 /* Conteudo principal da aplicacao */
 
+.active{
+    background-color: var(--azulEscuroDestaque);
+    transition: all 0.1s linear;
+}
+.active-tab{
+    background-color: var(--azulEscuroDestaque);
+    color: white;
+    transition: all 0.1s linear;
+}
+
+main{
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1200px;
+    width: 70%;
+    margin: auto;
+}
+
+section{
+    padding: 100px 0px;
+    
+}
+.section-title{
+    color: var(--azulEscuroDestaque);
+    font-size: 3rem;
+}
+
+.section-content{
+    margin-top: 80px;
+    min-height: 40vh;
+    
+}
+
+.section,
+.section-title,
+.section-content{
+    transition: transforme 0.2s linear;
+    animation: fadeIn 0.8s ease-out;
+}
 
 /* Taxa Metabolica */
 
@@ -98,26 +137,49 @@ header ul li:hover{
     align-items: start;
     gap: 50px;
     height: 45vh;
+
+
+    transition: transforme 0.2s linear;
+    animation: fadeIn 0.8s ease-out;
+    
 }
 
-.section-title{
-    color: var(--azulEscuroDestaque);
-    font-size: 3rem;
+#taxaMetabolicaBasal .section-conten:hover{
+    transform: translateY(-2);
+    
 }
 
-.section-content{
-    margin-top: 80px;
-    min-height: 40vh;
-}
+
+
+
 
 
 /* Resultado */
+
+.resultado, form{
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    color: #2c3e50;
+}
+
+.resultado h1, form h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+
 .resultado{
     flex: 1;
     opacity: 0;
     transition: all 0.5s ease;
 
     border: 1px solid var(--cinzaTextoSecundario);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
 
     padding: 50px 30px;
@@ -125,18 +187,21 @@ header ul li:hover{
     height: 100%
 }
 
+
 .resultado ul{
     margin-top: 30px;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .resultado li{
     padding: 20px;
     transition: all 0.1s ease;
+    border-bottom: 1px solid #c8c4c4;
 }
 
 .resultado li:hover{
     color: var(--fundoPrincipal);
-    background-color: var(--azulEscuroDestaque);
+    background-color: var(--azulClaroPrincipal);
 }
 
 form{
@@ -146,15 +211,22 @@ form{
     align-items: start;
 
     border: 1px solid var(--cinzaTextoSecundario);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
 
     padding: 50px 30px;
 
     height: 100%;
+    max-width: 300px;
+
+    animation: fadeIn 0.8s ease-in-out;
+
+
 }
 
 form label{
     margin-top: 20px;
+    
 }
 
 form .campo-genero{
@@ -168,7 +240,7 @@ form .campo-genero{
 form input[type=number]{
     padding: 10px;
     margin-right: 10px;
-    width: 300px;
+    width: 100%;
 }
 
 .icone {
@@ -176,16 +248,17 @@ form input[type=number]{
 }
 
 
-button{
-    width: 300px;
+form button{
+    width: 100%;
     padding: 30px;
-    background-color: #4DB6E2;
     color: var(--fundoPrincipal);
     border: none;
     cursor: pointer;
     margin-top: 40px;
 
     transition: all 0.1s ease-in-out;
+    background: linear-gradient(135deg, var(--azulEscuroDestaque) 0%, var(--azulClaroPrincipal) 100%);
+    color: white;
 
 }
 
@@ -201,6 +274,135 @@ button:hover{
     display: none;
 }
 
+
+.abas-nutricionais{
+    display: flex;
+    animation: fadeIn 0.8s ease-in-out;
+    background: linear-gradient(135deg, var(--azulEscuroDestaque) 0%, var(--azulClaroPrincipal) 100%);
+}
+
+.abas-nutricionais button{
+    padding: 40px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    flex: 1;
+}
+
+.abas-nutricionais button:hover{
+    background-color: #2c3e50;
+}
+
+
+
+/* Cada categoria */
+.tabela-categoria {
+    margin-top: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in-out;
+    
+}
+
+.tabela-categoria .section-content{
+    margin-top: -100px;
+}
+
+/* Título da categoria */
+.tabela-categoria h2 {
+    background: linear-gradient(135deg, var(--azulClaroPrincipal),var(--azulEscuroDestaque));
+    color: white;
+    margin: 0;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Tabela */
+.tabela-categoria table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+/* Cabeçalho da tabela */
+.tabela-categoria th {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 2px solid green;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Células */
+.tabela-categoria td {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #495057;
+}
+
+/* Linhas alternadas */
+.tabela-categoria tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Hover nas linhas */
+.tabela-categoria tbody tr:hover {
+    background-color: #e8f5e8;
+    transition: background-color 0.2s ease;
+}
+
+/* Destaque para calorias */
+.tabela-categoria td:nth-child(3) {
+    font-weight: 600;
+    color: #e74c3c;
+}
+
+/* Badge para alimentos light */
+.tabela-categoria tr[data-calorias][data-calorias="true"] td:nth-child(3) {
+    color: #27ae60;
+    position: relative;
+}
+
+.tabela-categoria tr[data-calorias][data-calorias="true"] td:nth-child(3)::after {
+    content: "⚡";
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale (0.95);
+    }
+    50% {
+       transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Destaque visual por categoria */
+
+
+
 /* Footer */
 
 footer {
@@ -208,7 +410,6 @@ footer {
   color: white;
   padding: 1rem;
   text-align: center;
-  margin-top: auto; /* Para layouts com flexbox */
 }
 
 .footer-links a {
@@ -218,69 +419,3 @@ footer {
 }
 
 
-
-/* Menu lateral */
-aside{
-    position: fixed;
-    width: 20px;
-    height: 100%;
-    transition: all 0.5s ease;
-    background-color: var(--azulClaroPrincipal);
-    color: var(--fundoPrincipal);
-
-    overflow: hidden;
-    left: 0;
-}
-
-aside:hover {
-width: 300px;
-}
-
-
-aside ul,
-.aside-header {
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    
-}
-
-aside:hover ul,
-aside:hover .aside-header{
-    opacity: 1;
-}
-
-aside .aside-header{
-    padding: 30px 10px;
-}
-aside li
-{
-    padding: 30px 10px;
-    cursor: pointer;
-    
-}
-aside li:hover{
-    background-color: var(--azulEscuroDestaque);
-}
-
-
-
-
-
-
-/* Mobile */
-
-@media(hover: none){
-
-}
-
-@media(width > 600px){
-    aside{
-        display: none;
-    }
-}
-
-@media(max-width: 750px){
-    aside{
-        width: 100%;
-    }
-}

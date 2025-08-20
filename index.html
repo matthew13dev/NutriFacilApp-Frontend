@@ -12,10 +12,10 @@
     <!-- Menu para websites -->
     <header class="">
         <div class="container">
-            <h1 class="azulPrincipal">NutriFacílApp</h1> 
+            <h1 class="section-title">NutriFacílApp</h1> 
         <menu><ul>
-            <li>Taxa Metabólica Basal</li>
-            <li>Tabela Nutricional</li></ul>
+            <li class="btnMenu" data-target="taxaMetabolicaBasal">Taxa Metabólica Basal</li>
+            <li class="btnMenu" data-target="tabelaNutricional">Tabela Nutricional</li></ul>
         </menu>
         </div>
     </header>
@@ -23,15 +23,15 @@
 
 
     <!-- Menu lateral para dispositivos móveis -->
-    <aside id="sidebar">
+    <!-- <aside id="sidebar">
         <div class="aside-header">
             <h1 class="azulPrincipal">NutriFacílApp</h1>
         </div>
         <ul>
-            <li><a href="Taxa Metabólica Basal">Taxa Metabólica Basal</a></li>
+            <li><a href="TaxaMetabólicaBasal">Taxa Metabólica Basal</a></li>
             <li><a href="tabelaNutricional">Tabela Nutricional</a></li>
         </ul>
-    </aside>
+    </aside> -->
 
 
 
@@ -39,8 +39,8 @@
     <main>
 
       
-        <!-- Section do formulario -->
-      <section class="container" id="taxaMetabolicaBasal">
+        <!-- Section IMC&TMB -->
+      <section class="content-sections container" id="taxaMetabolicaBasal">
         <div class="section-title">IMC & Taxa Metabólica Basal</div>
 
         <div class="section-content ">
@@ -62,14 +62,14 @@
                         <div class="radio-group">
                             <label for="homem">
                                 <input type="radio" name="genero" value="Homem" id="homem" checked>
-                                <span class="icone">♂</span> Homem
+                                <span class="icone">👨</span> Homem
                             </label>
                         
                             
 
                             <label for="mulher">
                                 <input type="radio" name="genero" value="Mulher"  id="mulher">
-                                <span class="icone">♀</span> Mulher
+                                <span class="icone">👩</span> Mulher
                             </label>
                         </div>
                     </div>
@@ -87,14 +87,14 @@
             
             </form>
 
-        <div id="resultadoTMB" class="resultado">
+            <div id="resultadoTMB" class="resultado">
 
-            <h1>Resultados</h1>
-            <ul id="resultadoTMBLista">
-                <!-- os resultados serao renderizados via javascript -->
-            </ul>
+                <h1>Resultados</h1>
+                <ul id="resultadoTMBLista">
+                    <!-- os resultados serao renderizados via javascript -->
+                </ul>
 
-        </div>
+            </div>
         </div>
       </section>
 
@@ -104,8 +104,27 @@
 
 
       <!-- Section tabela nutricional -->
-      <section id="tabelaNutricional" class="container tabelaNutricional">
-        <h1>Tabela Nutricional </h1>
+      <section id="tabelaNutricional" class="content-sections container tabelaNutricional">
+        <h1 class="section-title">Tabela Nutricional </h1>
+
+
+        <div class="section-content">
+            <div class="abas-nutricionais">
+                <button class="title-tabs" >Carboidratos</button>
+                <button class="title-tabs" >Proteinas</button>
+                <button class="title-tabs" >Gorduras</button>
+                <button class="title-tabs">Frutas</button>
+                <button class="title-tabs" >Legumes</button>
+                <button class="title-tabs" >Verduras</button>
+            </div>
+            
+            <div class="content-tabs carboidratos-section" id="carboidratos-section">Carboidratos</div>
+            <div class="content-tabs proteinas-section" id="proteinas-section">Proteinas</div>
+            <div class="content-tabs gorduras-section" id="gorduras-section">Gorduras</div>
+            <div class="content-tabs frutas-section" id="frutas-section">Frutas</div>
+            <div class="content-tabs legumes-section" id="legumes-section">Legumes</div>
+            <div class="content-tabs verduras-section" id="verduras-section">Verduras</div>
+        </div>
       </section>
 
          
@@ -113,12 +132,12 @@
 
 
     <footer>
-    <p>© 2024 NutriFacílApp - Todos os direitos reservados</p>
-    <div class="footer-links">
-      <a href="#">Termos de Uso</a>
-      <a href="#">Política de Privacidade</a>
-    </div>
-  </footer>
+        <p>© 2024 NutriFacílApp - Todos os direitos reservados</p>
+        <div class="footer-links">
+        <a href="#">Termos de Uso</a>
+        <a href="#">Política de Privacidade</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 

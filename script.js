@@ -82,8 +82,14 @@ function nutriFacilApp(){
                     idade: idade,
                     sexo: sexoReal
                 },
-                imc: {valor: imc, categoria: categoriaIMC(imc)},
-                taxaMetabolica: {valorRepouso: tmb,valorDiario: Math.round(fatorAtividade),formula: formulaTMB(imc)}
+                imc: {
+                    valor: imc, categoria: categoriaIMC(imc)
+                },
+                taxaMetabolica: {
+                    valorRepouso: tmb,
+                    valorDiario: Math.round(fatorAtividade),
+                    formula: formulaTMB(imc)
+                }
             }
 
             console.log(paciente);
@@ -126,7 +132,7 @@ function nutriFacilApp(){
         }
 
         function calcularTMB(imc,peso,altura,idade,sexo){
-            if(imc > 30){
+            if(imc >= 30){
                 return harrisBenedict(peso, altura,idade,sexo);
             } 
             else{
@@ -135,7 +141,7 @@ function nutriFacilApp(){
         }
 
         function formulaTMB(imc){
-            return imc > 30 ? "Mifflin St. Jeor" : "Harris Benedict";
+            return imc >= 30 ? "Mifflin St. Jeor" : "Harris Benedict";
         }
 
         function harrisBenedict(peso, altura, idade, sexo){
@@ -172,7 +178,7 @@ function nutriFacilApp(){
 
         function calcularFatorAtividade(fatorAtividade, tmb){
             switch(fatorAtividade){
-                case "sedetario":
+                case "sedentario":
                     return tmb * 1.2;
                     break;
                 case "poucoAtivo":

@@ -32,6 +32,18 @@ body{
 
 /* Header */
 
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
 header{
     background: linear-gradient(135deg, var(--azulClaroPrincipal),var(--azulEscuroDestaque));
     color: var(--fundoPrincipal);

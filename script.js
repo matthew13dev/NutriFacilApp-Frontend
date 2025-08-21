@@ -409,7 +409,8 @@ rendertabelaNutricional();
     // Criando corpo
     const corpoTabela = document.createElement("tbody");
 
-    for(const alimento of alimentosFiltrados){
+    const alimentosFiltradosOrdenaddos = [...alimentosFiltrados].sort((a, b)=>a.nome.localeCompare(b.nome));
+    for(const alimento of alimentosFiltradosOrdenaddos){
 
         const row = document.createElement("tr")
 
@@ -435,3 +436,78 @@ rendertabelaNutricional();
 
     categoriaContent.appendChild(divTabela);
 }
+
+
+async function renderTabelaTodosAlimentos(){
+    
+    const todosOsAlimentos = await carregarDadosTabelaNutricional();
+    const todosOsAlimentosOrdenados = [...todosOsAlimentos].sort((a, b)=>a.nome.localeCompare(b.nome));
+
+    console.log(todosOsAlimentos)
+    const categoria = "todosAlimentos";
+    const categoriaContent = document.getElementById("todos-section");
+    // categoriaContent.innerText = "";
+
+    // cria a div para a tabela
+    const divTabela = document.createElement("div");
+    divTabela.classList.add("tabela-categoria");
+    divTabela.setAttribute("data-categoria",categoria);
+
+    // // cria titulo
+    const titulo = document.createElement("h2");
+    titulo.textContent = categoria;
+    divTabela.appendChild(titulo);
+
+    //criando tabela
+    const tabela = document.createElement("table");
+
+    //criando cabecalho
+    const thead = document.createElement("thead");
+    const headerRow = document.createElement("tr");
+
+
+    const textosHeader = ["Alimento","Porcao","Calorias","Categoria"];
+
+    textosHeader.forEach(texto=>{
+        const th = document.createElement("th");
+        th.textContent = texto;
+        headerRow.appendChild(th);
+    })
+
+    thead.appendChild(headerRow);
+    tabela.appendChild(thead)
+
+
+    // Criando corpo
+    const corpoTabela = document.createElement("tbody");
+
+    for(const alimento of todosOsAlimentosOrdenados){
+
+        const row = document.createElement("tr")
+
+        const alimentoPropriedade = ["nome","porcao","calorias","categoria"];
+        alimentoPropriedade.forEach(propriedade =>{
+            const td = document.createElement("td")
+            td.textContent = alimento[propriedade]
+
+            if(alimento.calorias < 100){
+                row.setAttribute("data-calorias", "true");
+            }
+            row.appendChild(td);
+            
+        })
+
+        corpoTabela.appendChild(row)
+    }
+
+    tabela.appendChild(corpoTabela);
+    divTabela.appendChild(tabela);
+
+
+
+    categoriaContent.appendChild(divTabela);
+
+}
+
+
+renderTabelaTodosAlimentos();

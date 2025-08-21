@@ -340,7 +340,7 @@ async function rendertabelaNutricional(){
 
     //criando array de categorias
     const categorias = [...new Set(dados.map(item=>item.categoria))];
-
+    
     //criando arrays de alimentos para cada categoria
     for(const categoria of categorias){
         const alimentosFiltrados = dados.filter(item =>item.categoria === categoria);

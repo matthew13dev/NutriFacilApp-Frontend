@@ -60,6 +60,7 @@ header{
 
 header .section-title{
     color: #fff;
+    font-size: 2rem;
 }
 
 header .container{
@@ -68,6 +69,10 @@ header .container{
     align-items: center;
 
     
+}
+
+header .menuMobile{
+        display: block;
 }
 
 header ul{
@@ -121,7 +126,7 @@ main{
 }
 
 section{
-    padding: 50px 0px;
+    margin: 50px 0px;
     height: auto;
     
 }
@@ -150,7 +155,6 @@ section{
     justify-content: space-between;
     align-items: start;
     gap: 50px;
-    height: 45vh;
 
 
     transition: transforme 0.2s linear;
@@ -172,7 +176,6 @@ section{
 
 .resultado, form{
     background: white;
-    padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid #e0e0e0;
@@ -442,3 +445,68 @@ footer {
 }
 
 
+
+
+@media (width <= 700px) {
+    body{
+        font-size: 16px;
+    }
+
+    .container{
+        width: 90%;
+    }
+    .section-title{
+        font-size: 2rem;
+    }
+    .section-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header{
+        width: 100vw;
+    }
+
+    header .section-title{
+        font-size: 1.2rem;
+    }
+
+    header .logoContainer{
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+    }
+    .logo{
+        width: 50%;
+        height: 50%;
+    }
+
+    header menu{
+        display: none;
+    }
+
+    header .menuMobile{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menuMobile .bar{
+        width: 50px;
+        height: 5px;
+        background: linear-gradient(135deg, #f1f1f1, #2E8BC0);
+    }
+
+    form h1{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    form input,
+    form label{
+        font-size: 1rem;
+        margin: 0;
+    }
+    form label{
+        margin-top: 10px;
+    }
+}

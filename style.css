@@ -122,6 +122,7 @@ main{
 
 section{
     padding: 50px 0px;
+    height: auto;
     
 }
 .section-title{
@@ -131,7 +132,7 @@ section{
 
 .section-content{
     padding: 50px 0px;
-    height: 100%;
+    height: auto;
     
 }
 

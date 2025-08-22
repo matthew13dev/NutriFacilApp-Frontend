@@ -94,7 +94,7 @@ function nutriFacilApp(){
 
             console.log(paciente);
 
-            var resultados = ["IMC: "+ paciente.imc.valor,"Categoria: "+paciente.imc.categoria,"TMB em Repouso: "+paciente.taxaMetabolica.valorRepouso + "cal","TMB Diário: "+paciente.taxaMetabolica.valorDiario + "cal","Fórmula Usada: "+paciente.taxaMetabolica.formula];
+            var resultados = ["IMC: "+ paciente.imc.valor,"Categoria: "+paciente.imc.categoria,"TMB em Repouso: "+paciente.taxaMetabolica.valorRepouso + " kcal","TMB Diário: "+paciente.taxaMetabolica.valorDiario + " kcal","Fórmula Usada: "+paciente.taxaMetabolica.formula];
 
             var listaResultado = document.getElementById("resultadoTMBLista");
             listaResultado.innerText = "";

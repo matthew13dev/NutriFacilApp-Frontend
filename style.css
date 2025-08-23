@@ -524,6 +524,20 @@ footer {
     .menuMobileButton{
         display: block;
     }
+
+    .bar{
+        transition: all 0.3s linear;
+        background-color: transparent;
+    }
+     .menuMobileButton.active .bar1{
+        transform: rotate(-45deg) translate(-8px,8px);
+    }
+    .menuMobileButton.active .bar2{
+        opacity: 0;
+    }
+    .menuMobileButton.active .bar3{
+        transform: rotate(45deg) translate(-8px,-8px);
+    }
     .menuLinks{
         position: absolute;
         background: linear-gradient(135deg, var(--azulClaroPrincipal),var(--azulEscuroDestaque));
@@ -538,6 +552,8 @@ footer {
     .menuLinks.active{
         transform: translateX(0);
     }
+
+   
     .menuLinks ul{
         flex-direction: column;
         background: inherit;
@@ -556,6 +572,7 @@ footer {
         background-color: #2c3e50;
     }
 
+    
 
     
     

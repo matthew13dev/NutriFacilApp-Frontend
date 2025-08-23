@@ -525,6 +525,7 @@ function buttonMobile(){
 
     menuMobileButton.addEventListener("click", ()=>{
 
+        menuMobileButton.classList.toggle("active")
         if(menuLinks.classList.contains("active")){
             menuLinks.classList.remove("active")
         } else {
@@ -536,13 +537,14 @@ function buttonMobile(){
     })
 
     function animateLinks(){
-        for(let link of links){
+        links.forEach((link,index)=>{
             if(link.style.animation){
                 link.style.animation = "";
             } else {
-                link.style.animation = "naviLinkFade 0.5s ease forwards 0.3s";
+                link.style.animation = `naviLinkFade 0.5s ease forwards 
+                ${(index / 7) + 0.5}s`;
             }
-        }
+        })
 
     }
 }

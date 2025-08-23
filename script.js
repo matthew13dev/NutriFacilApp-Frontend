@@ -519,20 +519,24 @@ function buttonMobile(){
 
     const menuLinks  = document.querySelector(".menuLinks");
 
-    const links = [...document.querySelectorAll(".btnMenu")]
+    const body = document.querySelector("body")
 
     
 
     menuMobileButton.addEventListener("click", ()=>{
 
         menuMobileButton.classList.toggle("active")
-        if(menuLinks.classList.contains("active")){
-            menuLinks.classList.remove("active")
-        } else {
-            menuLinks.classList.add("active");
-        }
+        menuLinks.classList.toggle("active")
 
+        document.addEventListener("click",(event)=>{
+        if(!menuMobileButton.contains(event.target) && !menuLinks.contains(event.target)){
+            menuMobileButton.classList.remove("active")
+            menuLinks.classList.remove("active")
+        }
     })
+    })
+
+    
 
     
 }

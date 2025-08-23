@@ -607,6 +607,9 @@ footer {
         width: 100%;
     }
 
+    .barra-pesquisa input{ 
+        width: 100%;
+    }
     .tabela-categoria h2
     {
         width: 100%;

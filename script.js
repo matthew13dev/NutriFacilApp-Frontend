@@ -542,3 +542,18 @@ function buttonMobile(){
 }
 
 buttonMobile();
+
+
+
+function seachBar(){
+    var formPesqusar = document.querySelector("form-pesqusiar");
+
+    formPesqusar.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        
+        const busca = document.getElementById("seachBar");
+        console.log(busca);
+    })
+}
+
+seachBar();

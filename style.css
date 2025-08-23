@@ -331,6 +331,25 @@ button:hover{
 }
 
 
+/* barra de epsqusia */
+
+ .barra-pesquisa{
+        padding: 0;
+        margin: 2rem 0;
+
+        border: none;
+        box-shadow: none;
+        gap: 5px;
+        max-width: 500px;
+
+    }
+
+    .barra-pesquisa input,
+    .barra-pesquisa button{
+        margin: 0;
+        padding: 10px;
+        
+    }
 
 /* Cada categoria */
 
@@ -628,7 +647,7 @@ footer {
     }
 
 
-    
+   
 }
 
 

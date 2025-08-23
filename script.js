@@ -443,7 +443,7 @@ async function renderTabelaTodosAlimentos(){
     const todosOsAlimentos = await carregarDadosTabelaNutricional();
     const todosOsAlimentosOrdenados = [...todosOsAlimentos].sort((a, b)=>a.nome.localeCompare(b.nome));
 
-    console.log(todosOsAlimentos)
+    
     const categoria = "todosAlimentos";
     const categoriaContent = document.getElementById("todos-section");
     // categoriaContent.innerText = "";
@@ -511,3 +511,40 @@ async function renderTabelaTodosAlimentos(){
 
 
 renderTabelaTodosAlimentos();
+
+
+function buttonMobile(){
+
+    const menuMobileButton  =document.querySelector(".menuMobileButton");
+
+    const menuLinks  = document.querySelector(".menuLinks");
+
+    const links = [...document.querySelectorAll(".btnMenu")]
+
+    
+
+    menuMobileButton.addEventListener("click", ()=>{
+
+        if(menuLinks.classList.contains("active")){
+            menuLinks.classList.remove("active")
+        } else {
+            menuLinks.classList.add("active");
+        }
+        
+        animateLinks();
+
+    })
+
+    function animateLinks(){
+        for(let link of links){
+            if(link.style.animation){
+                link.style.animation = "";
+            } else {
+                link.style.animation = "naviLinkFade 0.5s ease forwards 0.3s";
+            }
+        }
+
+    }
+}
+
+buttonMobile();

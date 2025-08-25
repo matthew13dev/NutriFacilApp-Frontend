@@ -666,3 +666,11 @@ function todosButtonTab(){
 }
 
 todosButtonTab();
+
+function startApp(){
+    document.getElementById("taxaMetabolicaBasal").style.display = "none";
+    document.getElementById("tabelaNutricional").style.display = "block";
+}
+
+
+startApp();

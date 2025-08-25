@@ -447,7 +447,7 @@ async function renderTabelaTodosAlimentos(){
     const todosOsAlimentosOrdenados = [...todosOsAlimentos].sort((a, b)=>a.nome.localeCompare(b.nome));
 
     
-    const categoria = "todosAlimentos";
+    const categoria = "Todos os alimentos";
     const categoriaContent = document.getElementById("nonSeachTable");
 
     // cria a div para a tabela

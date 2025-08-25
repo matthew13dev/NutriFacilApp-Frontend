@@ -448,8 +448,142 @@ async function renderTabelaTodosAlimentos(){
 
     
     const categoria = "todosAlimentos";
-    const categoriaContent = document.getElementById("todos-section");
-    // categoriaContent.innerText = "";
+    const categoriaContent = document.getElementById("nonSeachTable");
+
+    // cria a div para a tabela
+    const divTabela = document.createElement("div");
+    divTabela.classList.add("tabela-categoria");
+    divTabela.setAttribute("data-categoria",categoria);
+
+    // // cria titulo
+    const titulo = document.createElement("h2");
+    titulo.textContent = categoria;
+    divTabela.appendChild(titulo);
+
+    //criando tabela
+    const tabela = document.createElement("table");
+
+    //criando cabecalho
+    const thead = document.createElement("thead");
+    const headerRow = document.createElement("tr");
+
+
+    const textosHeader = ["Alimento","Porcao","Calorias","Categoria"];
+
+    textosHeader.forEach(texto=>{
+        const th = document.createElement("th");
+        th.textContent = texto;
+        headerRow.appendChild(th);
+    })
+
+    thead.appendChild(headerRow);
+    tabela.appendChild(thead)
+
+
+    // Criando corpo
+    const corpoTabela = document.createElement("tbody");
+
+    for(const alimento of todosOsAlimentosOrdenados){
+
+        const row = document.createElement("tr")
+
+        const alimentoPropriedade = ["nome","porcao","calorias","categoria"];
+        alimentoPropriedade.forEach(propriedade =>{
+            const td = document.createElement("td")
+            td.textContent = alimento[propriedade]
+
+            if(alimento.calorias < 100){
+                row.setAttribute("data-calorias", "true");
+            }
+            row.appendChild(td);
+            
+        })
+
+        corpoTabela.appendChild(row)
+    }
+
+    tabela.appendChild(corpoTabela);
+    divTabela.appendChild(tabela);
+
+
+
+    categoriaContent.appendChild(divTabela);
+    document.getElementById("seachTable").style.display = "none";
+
+}
+
+
+renderTabelaTodosAlimentos();
+
+
+function buttonMobile(){
+
+    const menuMobileButton  =document.querySelector(".menuMobileButton");
+
+    const menuLinks  = document.querySelector(".menuLinks");
+
+    const body = document.querySelector("body")
+
+    
+
+    menuMobileButton.addEventListener("click", ()=>{
+
+        menuMobileButton.classList.toggle("active")
+        menuLinks.classList.toggle("active")
+
+        document.addEventListener("click",(event)=>{
+        if(!menuMobileButton.contains(event.target) && !menuLinks.contains(event.target)){
+            menuMobileButton.classList.remove("active")
+            menuLinks.classList.remove("active")
+        }
+    })
+    })
+
+    
+
+    
+}
+
+buttonMobile();
+
+
+
+function seachBar(){
+    var formPesqusar = document.getElementById("form-pesquisar");
+
+    return formPesqusar.addEventListener("submit",async (event)=>{
+        event.preventDefault();
+        
+        const buscaElement = document.getElementById("seachBar");
+        const buscaValor = normalizeText(buscaElement.value);
+
+        const todosAlimentos = await carregarDadosTabelaNutricional();
+
+        const alimentosMatch = todosAlimentos.filter((alimento) =>{
+
+            const nomeAlimento = normalizeText(alimento.nome);
+           
+            
+          return buscaValor === nomeAlimento || buscaValor.includes(nomeAlimento) || nomeAlimento.includes(buscaValor);
+        })
+
+        renderSeachTable(alimentosMatch,buscaValor);
+    })
+}
+
+seachBar();
+
+function renderSeachTable(array,busca){
+
+    const todosOsAlimentos = array;
+    console.log(todosOsAlimentos)
+    const todosOsAlimentosOrdenados = [...todosOsAlimentos].sort((a, b)=>a.nome.localeCompare(b.nome));
+
+    
+    const categoria = "Busca por: " + busca;
+    const categoriaContent = document.getElementById("seachTable")
+    categoriaContent.innerHTML = "";
+
 
     // cria a div para a tabela
     const divTabela = document.createElement("div");
@@ -510,53 +644,25 @@ async function renderTabelaTodosAlimentos(){
 
     categoriaContent.appendChild(divTabela);
 
+    categoriaContent.style.display = "block";
+    document.getElementById("nonSeachTable").style.display = "none";
 }
 
 
-renderTabelaTodosAlimentos();
-
-
-function buttonMobile(){
-
-    const menuMobileButton  =document.querySelector(".menuMobileButton");
-
-    const menuLinks  = document.querySelector(".menuLinks");
-
-    const body = document.querySelector("body")
-
-    
-
-    menuMobileButton.addEventListener("click", ()=>{
-
-        menuMobileButton.classList.toggle("active")
-        menuLinks.classList.toggle("active")
-
-        document.addEventListener("click",(event)=>{
-        if(!menuMobileButton.contains(event.target) && !menuLinks.contains(event.target)){
-            menuMobileButton.classList.remove("active")
-            menuLinks.classList.remove("active")
-        }
-    })
-    })
-
-    
-
-    
+function normalizeText(texto){
+        return texto.toLowerCase()
+        .normalize('NFD') // Remove acentos
+        .replace(/[\u0300-\u036f]/g, '') // Remove diacríticos
+        .replace(/\s+/g, '-') // Espaços para hífens
 }
 
-buttonMobile();
-
-
-
-function seachBar(){
-    var formPesqusar = document.getElementById("form-pesquisar");
-
-    formPesqusar.addEventListener("submit",(event)=>{
-        event.preventDefault();
+function todosButtonTab(){
+    document.getElementById("todosButtonTab").addEventListener("click",() =>{
         
-        const busca = document.getElementById("seachBar");
-        console.log(busca);
+        document.getElementById("seachBar").value = "";
+        document.getElementById("seachTable").style.display = "none";
+        document.getElementById("nonSeachTable").style.display = "block";
     })
 }
 
-seachBar();
+todosButtonTab();

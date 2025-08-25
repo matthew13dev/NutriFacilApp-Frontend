@@ -117,8 +117,9 @@
 
 
         <div class="section-content">
+            
             <div class="abas-nutricionais">
-                <button class="title-tabs" >Todos</button>
+                <button class="title-tabs" id="todosButtonTab">Todos</button>
                 <button class="title-tabs" >Carboidratos</button>
                 <button class="title-tabs" >Proteinas</button>
                 <button class="title-tabs" >Gorduras</button>
@@ -130,10 +131,18 @@
             </div>
             
             <div class="content-tabs todos-section" id="todos-section">
+
                 <form class="barra-pesquisa" id="form-pesquisar" action="">
                     <input type="text" placeholder="Pesquisar Alimento..." id="seachBar">
                     <button type="submit">Ir</button>
                 </form>
+
+                <div class="seachTable" id="seachTable">
+
+                </div>
+
+                <div class="nonSeachTatle" id="nonSeachTable"></div>
+
 
 
             </div>

@@ -549,7 +549,7 @@ buttonMobile();
 
 
 function seachBar(){
-    var formPesqusar = document.querySelector("form-pesqusiar");
+    var formPesqusar = document.getElementById("form-pesquisar");
 
     formPesqusar.addEventListener("submit",(event)=>{
         event.preventDefault();

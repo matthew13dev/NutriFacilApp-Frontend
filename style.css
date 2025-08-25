@@ -228,9 +228,11 @@ section{
 }
 
 .resultado li{
+    font-size: 1.2rem;
     padding: 20px;
     transition: all 0.1s ease;
     border-bottom: 1px solid #c8c4c4;
+    color: #2E8BC0;
 }
 
 .resultado li:hover{

@@ -30,7 +30,67 @@
     { "nome": "Feijão preto cozido (100g)", "calorias": 77 },
     { "nome": "Queijo minas (100g)", "calorias": 264 },
     { "nome": "Iogurte natural (100g)", "calorias": 61 },
-    { "nome": "Soja cozida (100g)", "calorias": 141 }
+    { "nome": "Soja cozida (100g)", "calorias": 141 },
+    {
+      "nome": "Carne moída bovina (100g)",
+      "calorias": 250
+    },
+    {
+      "nome": "Filé mignon (100g)",
+      "calorias": 271
+    },
+    {
+      "nome": "Peito de frango (100g)",
+      "calorias": 165
+    },
+    {
+      "nome": "Coxa de frango (100g)",
+      "calorias": 209
+    },
+    {
+      "nome": "Linguiça (100g)",
+      "calorias": 318
+    },
+    {
+      "nome": "Bacon (100g)",
+      "calorias": 541
+    },
+    {
+      "nome": "Salame (100g)",
+      "calorias": 336
+    },
+    {
+      "nome": "Presunto (100g)",
+      "calorias": 145
+    },
+    {
+      "nome": "Carne de porco (100g)",
+      "calorias": 242
+    },
+    {
+      "nome": "Picanha (100g)",
+      "calorias": 289
+    },
+    {
+      "nome": "Alcatra (100g)",
+      "calorias": 243
+    },
+    {
+      "nome": "Cupim (100g)",
+      "calorias": 324
+    },
+    {
+      "nome": "Carne de cordeiro (100g)",
+      "calorias": 294
+    },
+    {
+      "nome": "Carne de peru (100g)",
+      "calorias": 189
+    },
+    {
+      "nome": "Carne de pato (100g)",
+      "calorias": 337
+    }
   ],
   "Gorduras": [
     { "nome": "Abacate (100g)", "calorias": 160 },

@@ -458,10 +458,11 @@ async function renderTabelaTodosAlimentos(){
     // // cria titulo
     const titulo = document.createElement("h2");
     titulo.textContent = categoria;
-    divTabela.appendChild(titulo);
+    
 
     //criando tabela
     const tabela = document.createElement("table");
+    divTabela.appendChild(titulo);
 
     //criando cabecalho
     const thead = document.createElement("thead");

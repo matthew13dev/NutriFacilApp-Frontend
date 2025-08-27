@@ -3,6 +3,7 @@
     { "nome": "Arroz branco (100g)", "calorias": 130 },
     { "nome": "Feijão cozido (100g)", "calorias": 76 },
     { "nome": "Pão francês (1 unidade)", "calorias": 135 },
+    { "nome": "Molho de tomate (100g)", "calorias": 29 },
     { "nome": "Batata cozida (100g)", "calorias": 86 },
     { "nome": "Batata doce (100g)", "calorias": 86 },
     { "nome": "Macarrão cozido (100g)", "calorias": 158 },
@@ -31,6 +32,46 @@
     { "nome": "Queijo minas (100g)", "calorias": 264 },
     { "nome": "Iogurte natural (100g)", "calorias": 61 },
     { "nome": "Soja cozida (100g)", "calorias": 141 },
+     {
+      "nome": "Linguiça Calabresa (100g)",
+      "calorias": 300
+    },
+    {
+      "nome": "Linguiça Toscana (100g)",
+      "calorias": 320
+    },
+    {
+      "nome": "Linguiça Portuguesa (100g)",
+      "calorias": 280
+    },
+    {
+      "nome": "Linguiça de Frango (100g)",
+      "calorias": 100
+    },
+    {
+      "nome": "Linguiça Caseira (100g)",
+      "calorias": 340
+    },
+    {
+      "nome": "Linguiça Apimentada (100g)",
+      "calorias": 290
+    },
+    {
+      "nome": "Linguiça Suína (100g)",
+      "calorias": 350
+    },
+    {
+      "nome": "Linguiça de Pernil (100g)",
+      "calorias": 310
+    },
+    {
+      "nome": "Linguiça Mista (100g)",
+      "calorias": 330
+    },
+    {
+      "nome": "Linguiça Defumada (100g)",
+      "calorias": 310
+    },
     {
       "nome": "Carne moída bovina (100g)",
       "calorias": 250
@@ -94,6 +135,7 @@
   ],
   "Gorduras": [
     { "nome": "Abacate (100g)", "calorias": 160 },
+    { "nome": "Creme de leite light (100g)", "calorias": 196 },
     { "nome": "Azeite de oliva (1 colher sopa)", "calorias": 119 },
     { "nome": "Amendoim (100g)", "calorias": 567 },
     { "nome": "Castanha-do-pará (100g)", "calorias": 656 },
@@ -109,6 +151,7 @@
   ],
   "Frutas": [
     { "nome": "Banana prata (100g)", "calorias": 89 },
+    { "nome": "Tomate (100g)", "calorias": 18 },
     { "nome": "Maçã (100g)", "calorias": 52 },
     { "nome": "Laranja (100g)", "calorias": 47 },
     { "nome": "Manga (100g)", "calorias": 60 },
@@ -150,7 +193,8 @@
     { "nome": "Cebolinha (100g)", "calorias": 32 }
   ],
   "Bebidas":[
-    {"nome":"Café (100ml)","calorias":"1"}
+    {"nome":"Café (100ml)","calorias":"1"},
+    {"nome":"Leite integral (500ml)","calorias":"308"}
   ],
   "Doces":[
     {"nome":"Chocolate ao leite (100g)","calorias":"535"},

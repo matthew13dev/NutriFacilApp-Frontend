@@ -457,6 +457,7 @@ async function renderTabelaTodosAlimentos(){
 
     // // cria titulo
     const titulo = document.createElement("h2");
+    titulo.classList.add("todosAlimentos");
     titulo.textContent = categoria;
     
 
@@ -593,6 +594,7 @@ function renderSeachTable(array,busca){
 
     // // cria titulo
     const titulo = document.createElement("h2");
+    titulo.classList.add("todosAlimentos")
     titulo.textContent = categoria;
     divTabela.appendChild(titulo);
 

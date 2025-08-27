@@ -387,8 +387,11 @@ form.barra-pesquisa{
     font-size: 1.5rem;
     text-align: left;
     font-weight: 600;
-    min-width: 450px;
+    width: 100%;
+}
 
+.tabela-categoria h2.todosAlimentos{
+    min-width: 450px;
 }
 
 /* Tabela */
@@ -465,16 +468,6 @@ form.barra-pesquisa{
     }
 }
 
-@keyframes naviLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 /* Destaque visual por categoria */
 

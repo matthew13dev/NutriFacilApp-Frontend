@@ -15,7 +15,9 @@
     { "nome": "Batata-doce cozida (100g)", "calorias": 86 },
     { "nome": "Arroz integral (100g)", "calorias": 111 },
     { "nome": "Farinha de trigo (100g)", "calorias": 364 },
-    { "nome": "Pão integral (1 fatia)", "calorias": 69 }
+    { "nome": "Pão integral (1 fatia)", "calorias": 69 },
+    { "nome": "Tapioca (100g)", "calorias": 288 },
+    { "nome": "Cuscuz (100g)", "calorias": 112 }
   ],
   "Proteínas": [
     { "nome": "Frango (100g)", "calorias": 165 },
@@ -190,7 +192,8 @@
   ],
   "Bebidas":[
     {"nome":"Café (100ml)","calorias":"1"},
-    {"nome":"Leite integral (500ml)","calorias":"308"}
+    {"nome":"Leite integral (500ml)","calorias":"308"},
+    {"nome":"Leite integral (250ml)","calorias":"154"}
   ],
   "Doces":[
     {"nome":"Chocolate ao leite (100g)","calorias":"535"},

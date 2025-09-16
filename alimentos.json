@@ -127,6 +127,14 @@
     {
       "nome": "Carne de pato (100g)",
       "calorias": 337
+    },
+    {
+      "nome": "Figado bovino (100g)",
+      "calorias": 134
+    },
+    {
+      "nome": "Figado de frango (100g)",
+      "calorias": 167
     }
   ],
   "Gorduras": [

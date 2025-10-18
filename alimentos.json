@@ -1,5 +1,6 @@
 {
   "Carboidratos": [
+    {"nome": "Granola (30g)","calorias": 130},
     { "nome": "Arroz branco (100g)", "calorias": 130 },
     { "nome": "Feijão cozido (100g)", "calorias": 76 },
     { "nome": "Pão francês (1 unidade)", "calorias": 135 },

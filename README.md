@@ -1,4 +1,5 @@
  # NutriFacilApp 🥗💙
+ https://nutrifacilapp.vercel.app/
 
 O **NutriFacilApp** é uma ferramenta simples e prática desenvolvida para auxiliar no cálculo do **IMC** (Índice de Massa Corporal) e do **gasto calórico de manutenção**, ajudando a identificar quantas calorias uma pessoa precisa consumir para manter seu peso atual.  
 Além disso, o aplicativo conta com uma **tabela de consulta de alimentos** com informações calóricas para cada 100g, permitindo ajustes rápidos na dieta.
